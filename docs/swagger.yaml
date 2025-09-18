@@ -1,0 +1,9 @@
+basePath: /
+host: localhost:3000
+info:
+  contact: {}
+  description: Simple API for authentication using Fiber, GORM and SQLite
+  title: Temp AI Workshop REST API
+  version: "1.0"
+paths: {}
+swagger: "2.0"

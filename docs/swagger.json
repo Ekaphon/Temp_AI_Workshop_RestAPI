@@ -1,0 +1,12 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Simple API for authentication using Fiber, GORM and SQLite",
+        "title": "Temp AI Workshop REST API",
+        "contact": {},
+        "version": "1.0"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "paths": {}
+}
