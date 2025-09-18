@@ -1,0 +1,6 @@
+server
+bin/
+*.exe
+*.dll
+*.so
+.DS_Store
