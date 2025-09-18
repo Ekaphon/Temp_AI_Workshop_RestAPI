@@ -22,12 +22,19 @@ func main() {
 	api.Post("/register", Register)
 	api.Post("/login", Login)
 
-	// Protected example
+	// Profile
 	app.Get("/profile", RequireAuth, func(c *fiber.Ctx) error {
 		u := c.Locals("user").(*User)
 		return c.JSON(fiber.Map{"email": u.Email, "id": u.ID, "first_name": u.FirstName, "last_name": u.LastName, "phone": u.Phone, "member_level": u.MemberLevel, "points": u.Points})
 	})
 	app.Put("/profile", RequireAuth, UpdateProfile)
+
+	// Coupons
+	coupons := app.Group("/coupons")
+	coupons.Post("/", CreateCoupon)
+	coupons.Get("/", ListCoupons)
+	coupons.Get(":code", GetCoupon)
+	coupons.Post(":code/redeem", RequireAuth, RedeemCoupon) // require auth for redeem
 
 	// Health
 	app.Get("/", func(c *fiber.Ctx) error {

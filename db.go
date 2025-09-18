@@ -17,7 +17,7 @@ func InitDB() {
 	}
 
 	// Auto migrate
-	if err := DB.AutoMigrate(&User{}); err != nil {
+	if err := DB.AutoMigrate(&User{}, &Coupon{}); err != nil {
 		log.Fatalf("auto migrate failed: %v", err)
 	}
 }

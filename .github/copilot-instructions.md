@@ -1,5 +1,9 @@
 # Contributing Guidelines
 
+ก่อนจะดำเนินการแก้ไข ให้อ่านไฟล์ ใน folder `docs/design`
+ - ถ้าเป็นเรื่อง "user" ให้อ่าน `docs/design/detail.md`
+ - ถ้าเป็นเรื่อง "coupon" ให้อ่าน `docs/design/coupon.md`
+
 Purpose
 - Keep API, DB and docs consistent. Follow these rules when contributing code, tests or docs.
 
@@ -22,7 +26,7 @@ Go project layout
 - `models.go` — GORM models (source of truth for schema)
 - `db.go` — DB initialization and AutoMigrate
 - `docs/` — generated Swagger (run `swag init` to regenerate)
-- `design/` — diagrams (Mermaid)
+- `docs/design/` — diagrams (Mermaid)
 
 Branching & commits
 - Work on feature branches: `feature/<short-description>`
