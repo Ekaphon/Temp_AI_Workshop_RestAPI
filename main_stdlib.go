@@ -17,15 +17,15 @@ func main() {
 			http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 			return
 		}
-		
+
 		response := Response{
 			Message: "hello world",
 		}
-		
+
 		w.Header().Set("Content-Type", "application/json")
 		json.NewEncoder(w).Encode(response)
 	})
-	
+
 	fmt.Println("Server starting on port 3000...")
 	log.Fatal(http.ListenAndServe(":3000", nil))
 }
